@@ -1,0 +1,9 @@
+{
+  "Nom" : "Arthur",
+  "Descriptions" : "Roi de bretagne",
+  "Capacitée1" : "+1 action de combat gratuite",
+  "Capacitée2" : "+1 point d'action",
+  "Capacitée3" : "Le gral : permet de soigné 1 allié tout les 2 tours",
+  "Capacitée4" : "Excalibur : toute épée équipé main droite inflige 3 dégats",
+  "CapacitéeSpéciale" : "peux poeté le gral dans cette emplacement"
+}
