@@ -12,18 +12,18 @@ public class Items {
 
     private  int  palier;
 
-    private String rareté;
+    private String rarete;
 
     public Items() {
     }
 
-    public Items(String nom, String descriptions, String typeItem, String typeEmplacement, int palier, String rareté) {
+    public Items(String nom, String descriptions, String typeItem, String typeEmplacement, int palier, String rarete) {
         this.nom = nom;
         this.descriptions = descriptions;
         this.typeItem = typeItem;
         this.typeEmplacement = typeEmplacement;
         this.palier = palier;
-        this.rareté = rareté;
+        this.rarete = rarete;
     }
 
     public String getNom() {
@@ -66,11 +66,11 @@ public class Items {
         this.palier = palier;
     }
 
-    public String getRareté() {
-        return rareté;
+    public String getRarete() {
+        return rarete;
     }
 
-    public void setRareté(String rareté) {
-        this.rareté = rareté;
+    public void setRarete(String rarete) {
+        this.rarete = rarete;
     }
 }

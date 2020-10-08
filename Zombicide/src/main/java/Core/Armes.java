@@ -4,7 +4,7 @@ public class Armes extends Items{
 
     private int degats;
 
-    private int porté;
+    private int portee;
 
     private int nombresDeLancer;
 
@@ -21,10 +21,10 @@ public class Armes extends Items{
     public Armes() {
     }
 
-    public Armes(String nom, String descriptions, String typeItem, String typeEmplacement, int palier, String rareté, int degats, int porté, int nombresDeLancer, int valeurDeReussite, boolean ouvrePorte, int valeurOuvrePorte, boolean bruitOuvrePorte, boolean bruitAttaque) {
-        super(nom, descriptions, typeItem, typeEmplacement, palier, rareté);
+    public Armes(String nom, String descriptions, String typeItem, String typeEmplacement, int palier, String rarete, int degats, int portee, int nombresDeLancer, int valeurDeReussite, boolean ouvrePorte, int valeurOuvrePorte, boolean bruitOuvrePorte, boolean bruitAttaque) {
+        super(nom, descriptions, typeItem, typeEmplacement, palier, rarete);
         this.degats = degats;
-        this.porté = porté;
+        this.portee = portee;
         this.nombresDeLancer = nombresDeLancer;
         this.valeurDeReussite = valeurDeReussite;
         this.ouvrePorte = ouvrePorte;
@@ -41,12 +41,12 @@ public class Armes extends Items{
         this.degats = degats;
     }
 
-    public int getPorté() {
-        return porté;
+    public int getPortee() {
+        return portee;
     }
 
-    public void setPorté(int porté) {
-        this.porté = porté;
+    public void setPortee(int portee) {
+        this.portee = portee;
     }
 
     public int getNombresDeLancer() {

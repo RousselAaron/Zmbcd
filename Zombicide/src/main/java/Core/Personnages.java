@@ -1,42 +1,35 @@
 package Core;
 
-
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileReader;
 import java.io.IOException;
 
 public class Personnages extends Joueurs{
-
-    JSONParser jsonP = new JSONParser();
-
-    JSONObject jsonO = (JSONObject) jsonP.parse(new FileReader("Personnages.json"));
 
     private String Nom;
 
     private  String Descriptions;
 
-    private String[] Capacitée1;
+    private String[] Capacitee1;
 
-    private String[] Capacitée2;
+    private String[] Capacitee2;
 
-    private String[] Capacitée3;
+    private String[] Capacitee3;
 
-    private String[] Capacitée4;
+    private String[] Capacitee4;
 
-    private Object CapacitéeSpéciale;
+    private Object CapaciteeSpeciale;
 
-    public Personnages(int HP, int action, Object mainDroite, Object mainGauche, Object speciale, int XP, Object inventaire, String nom, String descriptions, String[] capacitée1, String[] capacitée2, String[] capacitée3, String[] capacitée4, Object capacitéeSpéciale) throws IOException, ParseException {
+    public Personnages(int HP, int action, Object mainDroite, Object mainGauche, Object speciale, int XP, Object inventaire, JSONParser jsonP, String nom, String descriptions, String[] capacitee1, String[] capacitee2, String[] capacitee3, String[] capacitee4, Object capaciteeSpeciale) {
         super(HP, action, mainDroite, mainGauche, speciale, XP, inventaire);
-        Nom = (String) jsonO.get("nom");
-        Descriptions = (String) jsonO.get("descriptions");
-        Capacitée1 = (String[]) jsonO.get("capacitée1");
-        Capacitée2 = (String[]) jsonO.get("capacitée2");
-        Capacitée3 = (String[]) jsonO.get("capacitée3");
-        Capacitée4 = (String[]) jsonO.get("capacitée4");
-        CapacitéeSpéciale = jsonO.get("capacitéeSpéciale");
+        Nom = nom;
+        Descriptions = descriptions;
+        Capacitee1 = capacitee1;
+        Capacitee2 = capacitee2;
+        Capacitee3 = capacitee3;
+        Capacitee4 = capacitee4;
+        CapaciteeSpeciale = capaciteeSpeciale;
     }
 
     public Personnages() throws IOException, ParseException {
@@ -58,43 +51,43 @@ public class Personnages extends Joueurs{
         Descriptions = descriptions;
     }
 
-    public String[] getCapacitée1() {
-        return Capacitée1;
+    public String[] getCapacitee1() {
+        return Capacitee1;
     }
 
-    public void setCapacitée1(String[] capacitée1) {
-        Capacitée1 = capacitée1;
+    public void setCapacitee1(String[] capacitee1) {
+        Capacitee1 = capacitee1;
     }
 
-    public String[] getCapacitée2() {
-        return Capacitée2;
+    public String[] getCapacitee2() {
+        return Capacitee2;
     }
 
-    public void setCapacitée2(String[] capacitée2) {
-        Capacitée2 = capacitée2;
+    public void setCapacitee2(String[] capacitee2) {
+        Capacitee2 = capacitee2;
     }
 
-    public String[] getCapacitée3() {
-        return Capacitée3;
+    public String[] getCapacitee3() {
+        return Capacitee3;
     }
 
-    public void setCapacitée3(String[] capacitée3) {
-        Capacitée3 = capacitée3;
+    public void setCapacitee3(String[] capacitee3) {
+        Capacitee3 = capacitee3;
     }
 
-    public String[] getCapacitée4() {
-        return Capacitée4;
+    public String[] getCapacitee4() {
+        return Capacitee4;
     }
 
-    public void setCapacitée4(String[] capacitée4) {
-        Capacitée4 = capacitée4;
+    public void setCapacitee4(String[] capacitee4) {
+        Capacitee4 = capacitee4;
     }
 
-    public Object getCapacitéeSpéciale() {
-        return CapacitéeSpéciale;
+    public Object getCapaciteeSpeciale() {
+        return CapaciteeSpeciale;
     }
 
-    public void setCapacitéeSpéciale(Object capacitéeSpéciale) {
-        CapacitéeSpéciale = capacitéeSpéciale;
+    public void setCapaciteeSpeciale(Object capaciteeSpeciale) {
+        CapaciteeSpeciale = capaciteeSpeciale;
     }
 }
