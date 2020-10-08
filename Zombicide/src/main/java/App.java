@@ -5,7 +5,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -34,7 +33,9 @@ public class App extends Application {
 
         try {
 
-            Object obj = jsonP.parse(new FileReader("perso.json"));
+            // test with input stream for read perso.json
+
+            Object obj = jsonP.parse(new FileReader(getClass().getResource("Core/perso.json").toString()));
 
             JSONObject jsonO = (JSONObject) obj;
             System.out.println(jsonO);
@@ -58,17 +59,15 @@ public class App extends Application {
         } catch (IOException e) {
             e.printStackTrace();
 
-        } catch (ParseException e) {
-            e.printStackTrace();
         }
 
-        System.out.println(nom);
-        System.out.println(descriptions);
-        System.out.println(capacitee1);
-        System.out.println(capacitee2);
-        System.out.println(capacitee3);
-        System.out.println(capacitee4);
-        System.out.println(capaciteeSpeciale);
+        System.out.println(this.nom);
+        System.out.println(this.descriptions);
+        System.out.println(this.capacitee1);
+        System.out.println(this.capacitee2);
+        System.out.println(this.capacitee3);
+        System.out.println(this.capacitee4);
+        System.out.println(this.capaciteeSpeciale);
 
         System.out.println(Arthur.getNom());
         System.out.println(Arthur.getDescriptions());
